@@ -88,9 +88,9 @@ def print_board(board):
 
     for i in range(len(board)):
         if i%3 == 0 and i != 0:
-            print("- - - - - - - - - - - - - -")
+            print("- - - - - - - - - - - -")
         for j in range(len(board[0])):
-            if j%3 == 0:
+            if j%3 == 0 and j !=0:
                 print(" | ", end="")
             if j == 8:
                 print(board[i][j], end="\n")
@@ -114,3 +114,4 @@ board = input_data(board)
 pp = pprint.PrettyPrinter(width=41, compact=True)
 solve(board)
 pp.pprint(board)
+# print_board(board)
