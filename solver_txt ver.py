@@ -43,7 +43,7 @@ def valid(board, pos, num):
 
     #Check column
     for i in range(0, len(board)):
-        if board[i][pos[1]] == num and pos[1] != i:
+        if board[i][pos[1]] == num and pos[0] != i:
             return False
     
     #Check box
@@ -74,7 +74,7 @@ def find_empty(board):
 
 def input_data(board):
     for i in range(len(board)):
-        inp_string = input("Please provide with numbers for the {}th row:".format(i))
+        inp_string = input("Please provide with numbers for the '{}' row:".format(i+1))
         for k in inp_string:
             board[i].append(int(k))
     return board
