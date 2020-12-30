@@ -72,6 +72,13 @@ def find_empty(board):
     
     return None
 
+def input_data(board):
+    for i in range(len(board)):
+        inp_string = input("Please provide with numbers for the {}th row:".format(i))
+        for k in inp_string:
+            board[i].append(int(k))
+    return board
+
 def print_board(board):
     """
     Prints the complete board
@@ -91,16 +98,18 @@ def print_board(board):
                 print(str(board[i][j]) + " ", end="")
 
 board = [
-    [7, 8, 0, 4, 0, 0, 1, 2, 0],
-    [6, 0, 0, 0, 7, 5, 0, 0, 9],
-    [0, 0, 0, 6, 0, 1, 0, 7, 8],
-    [0, 0, 7, 0, 4, 0, 2, 6, 0],
-    [0, 0, 1, 0, 5, 0, 9, 3, 0],
-    [9, 0, 4, 0, 6, 0, 0, 0, 5],
-    [0, 7, 0, 3, 0, 0, 0, 1, 2],
-    [1, 2, 0, 0, 0, 7, 4, 0, 0],
-    [0, 4, 9, 2, 0, 6, 0, 0, 7]
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
 ]
+
+board = input_data(board)
 
 pp = pprint.PrettyPrinter(width=41, compact=True)
 solve(board)
