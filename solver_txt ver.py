@@ -113,5 +113,5 @@ board = input_data(board)
 
 pp = pprint.PrettyPrinter(width=41, compact=True)
 solve(board)
-pp.pprint(board)
-# print_board(board)
+# pp.pprint(board)
+print_board(board)
