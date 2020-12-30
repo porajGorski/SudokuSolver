@@ -95,4 +95,4 @@ class Grid:
             return None
     
     def is_finished(self):
-        
+        pass
