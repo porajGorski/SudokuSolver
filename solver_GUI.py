@@ -3,6 +3,7 @@ GUI version of Sudoku Solver, version 1.0.
 """
 
 import pygame
+import pygame.constants
 import time
 from solver_txtver import solve, valid
 pygame.font.init()

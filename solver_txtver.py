@@ -2,7 +2,7 @@
 Text version of Sudoku Solver.
 """
 
-import pprint
+# import pprint
 
 def solve(board):
     """
@@ -72,46 +72,46 @@ def find_empty(board):
     
     return None
 
-def input_data(board):
-    for i in range(len(board)):
-        inp_string = input("Please provide with numbers for the '{}' row:".format(i+1))
-        for k in inp_string:
-            board[i].append(int(k))
-    return board
+# def input_data(board):
+#     for i in range(len(board)):
+#         inp_string = input("Please provide with numbers for the '{}' row:".format(i+1))
+#         for k in inp_string:
+#             board[i].append(int(k))
+#     return board
 
-def print_board(board):
-    """
-    Prints the complete board
-    :param board: 2d list of ints
-    :return: None
-    """
+# def print_board(board):
+#     """
+#     Prints the complete board
+#     :param board: 2d list of ints
+#     :return: None
+#     """
 
-    for i in range(len(board)):
-        if i%3 == 0 and i != 0:
-            print("- - - - - - - - - - - -")
-        for j in range(len(board[0])):
-            if j%3 == 0 and j !=0:
-                print(" | ", end="")
-            if j == 8:
-                print(board[i][j], end="\n")
-            else:
-                print(str(board[i][j]) + " ", end="")
+#     for i in range(len(board)):
+#         if i%3 == 0 and i != 0:
+#             print("- - - - - - - - - - - -")
+#         for j in range(len(board[0])):
+#             if j%3 == 0 and j !=0:
+#                 print(" | ", end="")
+#             if j == 8:
+#                 print(board[i][j], end="\n")
+#             else:
+#                 print(str(board[i][j]) + " ", end="")
 
-board = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
-]
+# board = [
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     []
+# ]
 
-board = input_data(board)
+# board = input_data(board)
 
-pp = pprint.PrettyPrinter(width=41, compact=True)
-solve(board)
-# pp.pprint(board)
-print_board(board)
+# pp = pprint.PrettyPrinter(width=41, compact=True)
+# solve(board)
+# # pp.pprint(board)
+# print_board(board)
